@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/books/{id}(id=${book.getId})}" th:object="${book}">
+    <div><label style="font-size: x-large" for="title">Изменить название книги: </label>
+        <input type="text" th:field="*{title}" id="title"/>
+    </div>
+    <div><label style="font-size: x-large" for="author">Изменить имя автора: </label>
+        <input type="text" th:field="*{author}" id="author"/>
+    </div>
+    <div><label style="font-size: x-large" for="year">Изменить год: </label>
+        <input type="text" th:field="*{year}" id="year"/>
+    </div>
+    <br>
+    <input style="font-size: x-large" type="submit" value="Сохранить изменения"/>
+</form>
+</body>
+</html>

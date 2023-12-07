@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание нового пользователя</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/users}" th:object="${user}">
+   <div> <label for="fullName">Введите ФИО пользователя: </label>
+    <input type="text" th:field="*{fullName}" id="fullName"/>
+   </div>
+    <br>
+    <div><label for="yearOfBirth">Введите год рождения пользователя: </label>
+    <input type="text" th:field="*{yearOfBirth}" id="yearOfBirth"/>
+    </div>
+    <br>
+    <div><input type="submit" value="Сохранить пользователя"/>
+    </div>
+</form>
+</body>
+</html>

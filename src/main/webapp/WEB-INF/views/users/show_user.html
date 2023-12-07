@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка пользователя</title>
+</head>
+<body>
+<p th:text="${user.getFullName() + ', ' + user.getYearOfBirth()}"/>
+<br>
+<hr>
+<a th:href="@{/users/{id}/edit(id=${user.getId()})}">Перейти на страницу редактирования --></a>
+<br>
+<form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId})}" th:object="${user}">
+    <input type="submit" value="Удалить пользователя!"/>
+</form>
+</body>
+</html>

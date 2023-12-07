@@ -1,0 +1,5 @@
+create table User(id int not null auto_increment, fullName varchar(80) not null unique, yearOfBirth int not null,
+primary key (id));
+
+create table Book(id int not null auto_increment, title varchar(80) not null, author varchar(80) not null, year int,
+primary key(id));

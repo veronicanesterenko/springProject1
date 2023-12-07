@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать данные пользователя</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/users/{id}(id=${user.getId})}" th:object="${user}">
+    <div><label style="font-size: xx-large" for="fullName">Изменить ФИО пользователя: </label>
+    <input type="text" th:field="*{fullName}" id="fullName"/>
+    </div>
+    <div><label style="font-size: xx-large" for="yearOfBirth">Изменить год рождения пользователя: </label>
+    <input type="text" th:field="*{yearOfBirth}" id="yearOfBirth"/>
+    </div>
+    <div><input type="submit" value="Редактировать пользователя"/>
+    </div>
+</form>
+</body>
+</html>
